@@ -7,15 +7,15 @@ import svgDesktop from './images/illustration-sign-up-desktop.svg'
 import svgMobile from './images/illustration-sign-up-mobile.svg'
 
 const viewportWidth = window.innerWidth
-// console.log(viewportWidth)
+console.log(viewportWidth)
 const NewsLetter= ({handleToggle, setEmail, errStateStyle})=>{
 
 
 return(  <main className="main-container">
-    {viewportWidth<=400 && <Image className="mobileImg" source={svgMobile}/>}
+    {viewportWidth<=450 && <Image className="mobileImg" source={svgMobile}/>}
     
     <EmailVerifing errStateStyle={errStateStyle} handlerFunction={handleToggle} setEmail={setEmail} />
-   {viewportWidth>400 && <Image className="desktopImg" source={svgDesktop}/>}
+   {viewportWidth>450 && <Image className="desktopImg" source={svgDesktop}/>}
     
 </main>
 

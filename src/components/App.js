@@ -19,7 +19,7 @@ else{
     setErrStateStyle({borderColor:"hsl(4, 100%, 67%)", backgroundColor:" hsl(4, 100%, 67%,0.5)", display:"block"})
     setTimeout(function(){
         setErrStateStyle(null)
-    },2000)
+    },3000)
     }
 
     }
