@@ -12,10 +12,10 @@ const NewsLetter= ({handleToggle, setEmail, errStateStyle})=>{
 
 
 return(  <main className="main-container">
-    {viewportWidth<=450 && <Image className="mobileImg" source={svgMobile}/>}
+    {viewportWidth<=450 && <Image className="mobileImg" source={svgMobile} altText="desktop-view-image"/>}
     
     <EmailVerifing errStateStyle={errStateStyle} handlerFunction={handleToggle} setEmail={setEmail} />
-   {viewportWidth>450 && <Image className="desktopImg" source={svgDesktop}/>}
+   {viewportWidth>450 && <Image className="desktopImg" source={svgDesktop} altText="mobile-view-image"/>}
     
 </main>
 

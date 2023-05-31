@@ -2,7 +2,6 @@ import react from 'react'
 import SigninPage from './SigninPage'
 import { useState } from 'react'
 import emailVerification from './emailVerifier'
-// import '../componentstyle.css'
 import SuccessState from './SuccessState'
 
 
@@ -26,11 +25,9 @@ else{
     
     return (<>
     
-    {isVisible ?<SigninPage errStateStyle={errStateStyle} setEmail={setEmail} handleToggle={handleToggle}/>:<SuccessState email={email} handleToggle={handleToggle}/>} 
+    {isVisible ?<SigninPage errStateStyle={errStateStyle} setEmail={setEmail} handleToggle={handleToggle}/>:<SuccessState email={email} setEmail={setEmail} handleToggle={handleToggle}/>} 
     </>)
 }
 
-{/* {isVisible && <  SigninPage handleToggle={handleToggle}/>}
- {!isVisible && <SuccessState handleToggle={handleToggle}/>} */}
 
 export default App

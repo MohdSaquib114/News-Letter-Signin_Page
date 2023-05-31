@@ -22,7 +22,7 @@ return(
     
 <Input errStateStyle={errStateStyle} valueReader={setEmail}/>
 
-  <Button className={"btn"} handlerFunction={handlerFunction}>Subscribe to monthly newsletter</Button>  
+  <Button className={"btn"} handlerFunction={handlerFunction} task="for-accepting">Subscribe to monthly newsletter</Button>  
     </div>
 
 

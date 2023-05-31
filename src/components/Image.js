@@ -1,11 +1,11 @@
 import react from 'react'
 import reactDom from 'react-dom'
 import '../componentstyle.css'
-// import svgDesktop from './images/illustration-sign-up-desktop.svg'
 
-const Image= ({className,source})=>
+
+const Image= ({className,source ,altText})=>
 {
-    return <img className="className"  src={source} />
+    return <img className="className"  src={source} alt={altText}/>
 }
 
 export default Image
