@@ -1,20 +1,32 @@
 import react from 'react'
 import SigninPage from './SigninPage'
 import { useState } from 'react'
+import emailVerification from './emailVerifier'
 // import '../componentstyle.css'
 import SuccessState from './SuccessState'
 
 
  const App = ()=>{
     const [isVisible , setVisiblity] = useState(true)
+    const [email, setEmail] = useState('')
+    const [errStateStyle, setErrStateStyle] =useState({})
+    
+    
     const handleToggle = ()=>{
-setVisiblity(!isVisible)
-console.log(isVisible)
+    if(emailVerification(email)){
+setVisiblity(!isVisible)}
+else{
+    setErrStateStyle({borderColor:"hsl(4, 100%, 67%)", backgroundColor:" hsl(4, 100%, 67%,0.5)", display:"block"})
+    setTimeout(function(){
+        setErrStateStyle(null)
+    },2000)
+    }
+
     }
     
     return (<>
     
-    {isVisible ?<SigninPage handleToggle={handleToggle}/>:<SuccessState handleToggle={handleToggle}/>} 
+    {isVisible ?<SigninPage errStateStyle={errStateStyle} setEmail={setEmail} handleToggle={handleToggle}/>:<SuccessState email={email} handleToggle={handleToggle}/>} 
     </>)
 }
 

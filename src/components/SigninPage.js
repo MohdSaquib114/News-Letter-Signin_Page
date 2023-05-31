@@ -8,13 +8,13 @@ import svgMobile from './images/illustration-sign-up-mobile.svg'
 
 const viewportWidth = window.innerWidth
 // console.log(viewportWidth)
-const NewsLetter= ({handleToggle})=>{
+const NewsLetter= ({handleToggle, setEmail, errStateStyle})=>{
 
 
 return(  <main className="main-container">
     {viewportWidth<=400 && <Image className="mobileImg" source={svgMobile}/>}
     
-    <EmailVerifing handlerFunction={handleToggle} />
+    <EmailVerifing errStateStyle={errStateStyle} handlerFunction={handleToggle} setEmail={setEmail} />
    {viewportWidth>400 && <Image className="desktopImg" source={svgDesktop}/>}
     
 </main>
