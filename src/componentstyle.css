@@ -166,7 +166,7 @@ background: linear-gradient(90deg, rgba(221,83,178,1) 0%, rgba(218,77,37,1) 100%
     
 }
 
-@media (max-width:400px) {
+@media (max-width:600px) {
    .main-container{
     width: 100%;
     /* height: 100%; */
